@@ -16,6 +16,10 @@ public class Task extends Model {
   @Required
   public String label;
 
+  public Task(String label) {
+    this.label = label;
+  }
+
   public static Finder<Long,Task> find = new Finder(
     Long.class, Task.class
   );
